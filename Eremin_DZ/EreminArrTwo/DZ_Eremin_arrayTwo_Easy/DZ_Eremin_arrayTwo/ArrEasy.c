@@ -6,8 +6,8 @@ void randArray(int** B, int n, int a, int b)
 {
 	int i;
 	int j;
-		for (i = 0; i < n; i++)
-			B[i] = rand() % (b - a) + a;
+	for (i = 0; i < n; i++)
+		B[i] = rand() % (b - a) + a;
 }
 void RandArray2d(int** A, int n, int m, int a1, int b1)
 {
@@ -39,10 +39,11 @@ void Print2D_2(int** A, int n, int m)
 void work(int** A, int n, int m)
 {
 	printf("\n----------------Задание----------------\n");
-	
+
 	printf("---Поиск максимума:\n");
 	int i, j;
 	int max;
+	int N;
 	for (i = 0; i < n; i++)
 	{
 		printf("%d  ", A[i][0]);
@@ -52,28 +53,23 @@ void work(int** A, int n, int m)
 			if (A[j][0] > max)
 			{
 				max = A[j][0];
+				N = j;
 			}
 		}
 	}
 	printf("\n");
 	printf("Max=%d\n", max);
 	printf("\n");
-	
+
 	printf("---Замена с первой строчкой:\n");
 	int tmp;
 	int o;
-	for (i = 0; i < n; i++)
+	i = N;
+	for (o = 0; o < m; o++)
 	{
-		if (A[i][0] == max)
-		{
-			for (o = 0; o < m; o++)
-			{
-				tmp = A[0][o];
-				A[0][o] = A[i][o];
-				A[i][o] = tmp;
-			}
-			break;
-		}
+		tmp = A[0][o];
+		A[0][o] = A[i][o];
+		A[i][o] = tmp;
 	}
 	Print2D_2(A, n, m);
 }
@@ -85,8 +81,8 @@ int main()
 	setlocale(LC_ALL, NULL);
 	setlocale(LC_CTYPE, "Russian");
 
-	int n = 5, i;
-	int m = 6;
+	int n = 3, i;
+	int m = 5;
 	int** M = malloc(sizeof(int*) * n);
 	for (i = 0; i < n; i++)
 		(M)[i] = malloc(sizeof(int) * m);
