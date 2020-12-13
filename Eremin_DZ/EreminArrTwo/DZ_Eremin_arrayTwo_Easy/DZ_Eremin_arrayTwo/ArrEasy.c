@@ -87,7 +87,7 @@ int main()
 	for (i = 0; i < n; i++)
 		(M)[i] = malloc(sizeof(int) * m);
 	printf("--------Генерация рандомной матрицы--------\n\n");
-	RandArray2d(M, n, m, 1, 10);
+	RandArray2d(M, n, m, 1, 20);
 	Print2D_2(M, n, m);
 	printf("--------------------------------------------\n");
 	work(M, n, m);
