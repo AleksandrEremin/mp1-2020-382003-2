@@ -3,7 +3,7 @@
 #include <string.h>
 
 
-void CountWordsW(char* str)
+void Words(char* str)
 {
 	int i, key = 0, max = 0, n = 0, num;
 	num = strlen(str);
@@ -48,5 +48,5 @@ void main()
 	char* strings = "This is! ;;homework,, !for, strings!";
 	printf("%s\n\n", strings);
 
-    CountWordsW(strings);
+    Words(strings);
 }
