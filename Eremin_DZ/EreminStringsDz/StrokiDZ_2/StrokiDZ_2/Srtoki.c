@@ -4,7 +4,7 @@
 
 int main(void) 
 {
-    char* name = "C:\\Users/Aleksandr/mp1-2020-382003-2/Eremin_DZ/EreminTeylorDZ.sln\n";
+    char* name = "C:\\Users/Aleksandr/mp1-2020-382003-2/Eremin_DZ/EreminTeylorDZ.sln";
 	int i = strlen(name);
 	int j = i, j2 = i;
 	
