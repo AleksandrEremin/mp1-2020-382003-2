@@ -48,5 +48,5 @@ void main()
 	char* strings = "This is! ;;homework,, !for, strings!";
 	printf("%s\n\n", strings);
 
-    CountWordsW(strings);
+	CountWordsW(strings);
 }
