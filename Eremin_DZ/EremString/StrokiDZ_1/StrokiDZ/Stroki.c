@@ -186,6 +186,7 @@ void main()
 	for (i = 0; i < n; i++)
 		words[i] = (char*)malloc(sizeof(char) * 20);
 
+<<<<<<< HEAD
 	
 	
 	num = strlen(strings);
@@ -199,6 +200,9 @@ void main()
 	MassivSlov(strings, words);
 
 	//ChisloPovtorov(strings, words);
+=======
+	CountWordsW(strings);
+>>>>>>> 1b68d80c197e76292b1c8fb61f695c2a464291d7
 }
 
 
